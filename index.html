@@ -47,6 +47,11 @@
             font-weight: bold;
             color: #2c3e50;
         }
+
+        .logo img {
+            max-height:200px;
+            width:auto;
+        }
         
         .nav-links {
             display: flex;
@@ -91,13 +96,17 @@
         /* Main Content */
         .intro {
             padding: 60px 0;
-            text-align: center;
         }
         
         .intro h1 {
             font-size: 36px;
             margin-bottom: 20px;
             color: #2c3e50;
+            text-align: center;
+        }
+
+        .intro h2 {
+            text-align: center;
         }
         
         .intro p {
@@ -105,6 +114,7 @@
             max-width: 800px;
             margin: 0 auto 20px;
             color: #555;
+            text-align: left;
         }
         
         /* Products Section */
@@ -132,6 +142,7 @@
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            display:block;
         }
         
         .product-card:hover {
@@ -171,7 +182,7 @@
         .content-block {
             display: flex;
             margin-bottom: 60px;
-            align-items: center;
+            align-items: flex-start;
         }
         
         .content-block:nth-child(even) {
@@ -308,20 +319,23 @@
             }
         }
     </style>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav>
-                <div class="logo">ABC-Science LLC</div>
+                <div class="logo">
+                    <a href="/" title="ABC-Science"><img src="images/logo_mini-abc.png" alt="ABC-Science"></a>
+                </div>
                 <div class="menu-toggle">☰</div>
                 <ul class="nav-links">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">STEM Kit</a></li>
-                    <li><a href="#">Chemistry Set</a></li>
-                    <li><a href="#">Space Explorer</a></li>
-                    <li><a href="#">Anatomy Model</a></li>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="prod_stem.html">STEM Kit</a></li>
+                    <li><a href="prod_lab.html">Chemistry Set</a></li>
+                    <li><a href="prod_telescop.html">Space Explorer</a></li>
+                    <li><a href="prod_anatomy.html">Anatomy Model</a></li>
                 </ul>
             </nav>
         </div>
@@ -329,7 +343,7 @@
 
     <!-- Main Banner -->
     <section class="banner">
-        <img src="images/content/main_img.png" alt="ABC-Science Educational Materials" id="main-banner">
+        <img src="images/content/main_img.jpg" alt="ABC-Science Educational Materials" id="main-banner">
     </section>
 
     <!-- Introduction Section -->
@@ -347,7 +361,7 @@
         <div class="container">
             <h2 class="section-title">Educational Kits</h2>
             <div class="product-grid">
-                <div class="product-card">
+                <a class="product-card" href="prod_stem.html">
                     <div class="product-img">
                         <img src="images/product/stem_1.jpg" alt="STEM Learning Kit">
                     </div>
@@ -355,9 +369,9 @@
                         <h3>STEM Learning Kit</h3>
                         <p>Comprehensive kit for exploring science, technology, engineering, and math concepts.</p>
                     </div>
-                </div>
+                </a>
                 
-                <div class="product-card">
+                <a class="product-card" href="prod_lab.html">
                     <div class="product-img">
                         <img src="images/product/lab_1.jpg" alt="Chemistry Set">
                     </div>
@@ -365,9 +379,9 @@
                         <h3>Chemistry Set</h3>
                         <p>Complete laboratory set for safe and exciting chemistry experiments at home.</p>
                     </div>
-                </div>
+                </a>
                 
-                <div class="product-card">
+                <a class="product-card" href="prod_telescop.html">
                     <div class="product-img">
                         <img src="images/product/telescop_1.jpg" alt="Space Explorer Kit">
                     </div>
@@ -375,9 +389,9 @@
                         <h3>Space Explorer Kit</h3>
                         <p>Astronomy kit with telescope and materials to explore the wonders of space.</p>
                     </div>
-                </div>
+                </a>
                 
-                <div class="product-card">
+                <a class="product-card" href="prod_anatomy.html">
                     <div class="product-img">
                         <img src="images/product/anatomy_1.jpg" alt="Human Anatomy Model">
                     </div>
@@ -385,7 +399,7 @@
                         <h3>Human Anatomy Model</h3>
                         <p>Detailed anatomical model for studying human body systems and functions.</p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -403,7 +417,7 @@
                     <p>Each specialized kit incorporates multi-sensory learning techniques and supports differentiated instruction, making them equally valuable for typical learners and students with special education needs. Our materials are designed to work within various educational settings including homeschool environments, microschools, and home-based education programs while providing the educational value and structured learning experiences that families seek when participating in scholarship programs.</p>
                 </div>
                 <div class="content-image">
-                    <img src="images/content/2_1.png" alt="Kit Materials">
+                    <img src="images/content/2_1.jpg" alt="Kit Materials">
                 </div>
             </div>
             
@@ -415,7 +429,7 @@
                     <p>Beyond academic achievement, our hands-on approach cultivates essential life skills including critical thinking, problem-solving, perseverance, and collaborative teamwork. As students work through experiments and construction challenges, they develop scientific reasoning skills and learn to apply the engineering design process—asking questions, making observations, and iterating on their designs. This methodology supports various educational settings from traditional classrooms to homeschool environments and microschools, providing the flexible, engaging learning experiences that modern education demands while meeting rigorous instructional standards.</p>
                 </div>
                 <div class="content-image">
-                    <img src="images/content/3_1.png" alt="Learning by Doing">
+                    <img src="images/content/3_2.jpg" alt="Learning by Doing">
                 </div>
             </div>
             
@@ -428,7 +442,7 @@
                     <p>Each kit undergoes rigorous review to ensure it supports educational goals, promotes academic achievement, and provides measurable student outcomes. We maintain detailed records of how our materials align with state educational standards and core curriculum requirements, making it easier for families to demonstrate the educational value and appropriateness of our products for their specific program needs. This thorough approach to development and documentation reflects our deep understanding of the complex landscape of educational choice programs and our dedication to supporting families navigating these opportunities.</p>
                 </div>
                 <div class="content-image">
-                    <img src="images/content/4_1.png" alt="Educational Program Requirements">
+                    <img src="images/content/4_2.jpg" alt="Educational Program Requirements">
                 </div>
             </div>
 
@@ -441,7 +455,7 @@
                     <p>Our materials support the development of growth mindset by demonstrating that abilities can be developed through dedication and hard work. When students encounter challenges in assembling models or troubleshooting experiments, they learn valuable lessons in perseverance and creative problem-solving that extend far beyond academic settings. These experiences build the foundation for future success in higher education and career environments where self-motivation, adaptability, and continuous learning are increasingly essential qualities.</p>
                 </div>
                 <div class="content-image">
-                    <img src="images/content/5_1.png" alt="Independent Discovery">
+                    <img src="images/content/5_1.jpg" alt="Independent Discovery">
                 </div>
             </div>
 
@@ -454,7 +468,7 @@
                     <p>Our materials also support special education needs by providing clear frameworks for adaptation and modification, allowing parents to tailor activities to their child's specific abilities and challenges. The multi-sensory nature of our kits offers multiple entry points for understanding, ensuring that children with different learning styles can fully participate and experience success. This inclusive design reinforces that learning differences are simply different approaches to understanding the world, helping families celebrate neurodiversity while building essential academic skills and knowledge.</p>
                 </div>
                 <div class="content-image">
-                    <img src="images/content/6_1.png" alt="Educational Program Requirements">
+                    <img src="images/content/6_1.jpg" alt="Educational Program Requirements">
                 </div>
             </div>
 
@@ -466,7 +480,7 @@
                     <p>The psychological benefits of our approach extend beyond academic achievement to foster genuine intellectual confidence and positive attitudes toward learning. By presenting challenges that are appropriately matched to developmental capabilities, we create opportunities for successful experiences that build self-efficacy and resilience. The immediate feedback provided by hands-on experimentation—where cause and effect are directly observable—helps children develop accurate self-assessment skills and intrinsic motivation. This careful balance of challenge and support creates psychological safety in the learning process, allowing children to take intellectual risks, make mistakes, and develop growth mindsets that will serve them throughout their educational journey and beyond.</p>
                     <p>Our materials also support the development of executive functions—including planning, organization, and self-regulation—through structured projects that require sequencing, time management, and adjustment of strategies based on outcomes. These meta-cognitive skills are increasingly recognized as critical predictors of long-term academic and life success. By embedding these developmentally appropriate challenges within engaging hands-on activities, we help children build the cognitive foundations necessary for advanced learning while maintaining the joy and wonder that should characterize childhood education.</p>                </div>
                 <div class="content-image">
-                    <img src="images/content/7_1.png" alt="Development at the Right Time">
+                    <img src="images/content/7_1.jpg" alt="Development at the Right Time">
                 </div>
             </div>
 
@@ -479,7 +493,7 @@
                     <p>We maintain ongoing collaboration with special education professionals, occupational therapists, and educational psychologists to ensure our materials continue to meet the evolving needs of diverse learners. This commitment to accessibility extends to physical design considerations as well, with larger components for developing fine motor skills, high-contrast visual elements for visually impaired students, and clear, step-by-step visual instructions that support comprehension across language barriers and processing differences. By embedding universal design principles throughout our development process, we create educational experiences that truly live up to the promise of education freedom accounts and scholarship programs—making quality STEM education accessible to every child, regardless of their learning profile.</p>
                 </div>
                 <div class="content-image">
-                    <img src="images/content/8_1.png" alt="Education Accessible to Everyone">
+                    <img src="images/content/8_1.jpg" alt="Education Accessible to Everyone">
                 </div>
             </div>
 
@@ -493,7 +507,7 @@
                     <p>Each kit is designed to develop not only technical skills but also the critical thinking, problem-solving abilities, and professional mindsets that employers value across technology and science sectors. By providing authentic, career-relevant learning experiences at an early age, we help students make informed decisions about their educational pathways while building practical skills that will serve them regardless of their ultimate career choices. Our materials support the development of both hard technical skills and soft skills like collaboration, documentation, and systematic thinking that are essential for success in tomorrow's workforce.</p>
                 </div>
                 <div class="content-image">
-                    <img src="images/content/9_1.png" alt="Building Foundations for Future Careers">
+                    <img src="images/content/9_1.jpg" alt="Building Foundations for Future Careers">
                 </div>
             </div>
 
@@ -520,15 +534,14 @@
                 
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <a href="#">Home</a>
-                    <a href="#">Products</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Program Compliance</a>
+                    <a href="/">Home</a>
+                    <a href="/#products">Products</a>
+                    <a href="/#about">About Us</a>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 ABC-Science LLC. All rights reserved. | Terms of Service | Privacy Policy</p>
+                <p>&copy; 2023 ABC-Science. All rights reserved. | Terms of Service | Privacy Policy</p>
             </div>
         </div>
     </footer>
@@ -542,14 +555,19 @@
         // Simple image preloading for better performance
         window.addEventListener('load', function() {
             const images = [
-                'https://placehold.co/1200x400/2c3e50/ecf0f1/png?text=ABC-Science+Educational+Materials',
-                'https://placehold.co/300x200/3498db/ffffff/png?text=STEM+Kit',
-                'https://placehold.co/300x200/e74c3c/ffffff/png?text=Chemistry+Set',
-                'https://placehold.co/300x200/2ecc71/ffffff/png?text=Space+Explorer',
-                'https://placehold.co/300x200/9b59b6/ffffff/png?text=Anatomy+Model',
-                'https://placehold.co/600x400/3498db/ffffff/png?text=Approved+Materials',
-                'https://placehold.co/600x400/2ecc71/ffffff/png?text=Special+Education',
-                'https://placehold.co/600x400/e74c3c/ffffff/png?text=Compliance'
+                'images/content/main_img.jpg',
+                'images/product/anatomy_1.jpg',
+                'images/product/lab_1.jpg',
+                'images/product/stem_1.jpg',
+                'images/product/telescop_1.jpg',
+                'images/content/2_1.jpg',              
+                'images/content/3_2.jpg',
+                'images/content/4_2.jpg',
+                'images/content/5_1.jpg',
+                'images/content/6_1.jpg',
+                'images/content/7_1.jpg',
+                'images/content/8_1.jpg',
+                'images/content/9_1.jpg'
             ];
             
             images.forEach(src => {
