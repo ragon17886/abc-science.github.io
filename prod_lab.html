@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM Learning Kit - ABC-Science LLC</title>
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .logo img {
+            max-height: 50px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Product Section */
+        .product-section {
+            padding: 60px 0;
+        }
+        
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .product-gallery {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .main-image {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .main-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .thumbnail-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        
+        .thumbnail {
+            border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        
+        .thumbnail:hover, .thumbnail.active {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .product-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .product-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .product-description {
+            margin-bottom: 30px;
+        }
+        
+        .product-description p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .features-list {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .features-list li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .specs-table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .specs-table td:first-child {
+            font-weight: bold;
+            color: #2c3e50;
+            width: 40%;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #ecf0f1;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: #3498db;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: #fff;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: left 0.3s;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .thumbnail-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .thumbnail-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .product-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html" title="ABC-Science"><img src="images/logo_mini-abc.png" alt="ABC-Science"></a>
+                </div>
+                <div class="menu-toggle">☰</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="prod_stem.html" class="active">STEM Kit</a></li>
+                    <li><a href="prod_lab.html">Chemistry Set</a></li>
+                    <li><a href="prod_telescop.html">Space Explorer</a></li>
+                    <li><a href="prod_anatomy.html">Anatomy Model</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="container">
+            <div class="product-container">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="images/product/stem_1.jpg" alt="STEM Learning Kit" id="main-product-image">
+                    </div>
+                    <div class="thumbnail-container">
+                        <div class="thumbnail active" data-image="images/product/stem_1.jpg">
+                            <img src="images/product/stem_1.jpg" alt="STEM Kit Image 1">
+                        </div>
+                        <div class="thumbnail" data-image="images/product/stem_2.jpg">
+                            <img src="images/product/stem_2.jpg" alt="STEM Kit Image 2">
+                        </div>
+                        <div class="thumbnail" data-image="images/product/stem_3.jpg">
+                            <img src="images/product/stem_3.jpg" alt="STEM Kit Image 3">
+                        </div>
+                        <div class="thumbnail" data-image="images/product/stem_4.jpg">
+                            <img src="images/product/stem_4.jpg" alt="STEM Kit Image 4">
+                        </div>
+                        <div class="thumbnail" data-image="images/product/stem_5.jpg">
+                            <img src="images/product/stem_5.jpg" alt="STEM Kit Image 5">
+                        </div>
+                        <div class="thumbnail" data-image="images/product/stem_6.jpg">
+                            <img src="images/product/stem_6.jpg" alt="STEM Kit Image 6">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-details">
+                    <h1 class="product-title">Wooden STEM Kit 10-in-1</h1>
+                    
+                    <div class="product-description">
+                        <p>This multifunctional wooden STEM kit allows you to build 10 fascinating models that introduce children to the fundamentals of physics, mechanics, engineering, and technology. All parts of the set are made of eco-friendly wood, making the assembly process not only educational but also safe.</p>
+                        
+                        <h3>What can be built from the kit:</h3>
+                        <ul class="features-list">
+                            <li><strong>Hydraulic Excavator</strong> - A model with two syringes demonstrating the principles of hydraulics and construction equipment operation.</li>
+                            <li><strong>Elevator Lift</strong> - A mechanical elevator model with electric drive or manual control.</li>
+                            <li><strong>Lifting Table (Hydraulic Lift)</strong> - Demonstrates the operation of lifting platforms using hydraulics.</li>
+                            <li><strong>Suspension Bridge</strong> - An engineering structure model illustrating the laws of bridge strength and stability.</li>
+                            <li><strong>Catapult</strong> - A classic mechanical catapult for launching small objects.</li>
+                            <li><strong>Ballista</strong> - An ancient projectile throwing machine.</li>
+                            <li><strong>Rubber Band Car</strong> - A model car powered by a twisted rubber band.</li>
+                            <li><strong>Electric Car</strong> - A car powered by an electric motor, controlled via remote.</li>
+                            <li><strong>Drawing Pendulum (Spirograph)</strong> - A device that creates patterns through rotation and pendulum movements.</li>
+                            <li><strong>Snake Lift (Serpentine Elevator)</strong> - A mechanical model demonstrating movement along a complex trajectory.</li>
+                        </ul>
+                        
+                        <h3>Benefits of the kit:</h3>
+                        <ul class="features-list">
+                            <li>Develops logical thinking, motor skills, engineering, and spatial imagination.</li>
+                            <li>Allows studying the basics of physics, mechanics, hydraulics, electrical engineering, and architecture.</li>
+                            <li>Excellent for joint activities of parents and children, as well as for school projects.</li>
+                        </ul>
+                        
+                        <table class="specs-table">
+                            <tr>
+                                <td>Age</td>
+                                <td>6+ years</td>
+                            </tr>
+                            <tr>
+                                <td>Contents</td>
+                                <td>All necessary wooden parts for 10 models, hydraulic elements (syringes, tubes), electric motor, wires, detailed assembly instructions.</td>
+                            </tr>
+                            <tr>
+                                <td>Material</td>
+                                <td>Eco-friendly wood, plastic elements, metal components</td>
+                            </tr>
+                            <tr>
+                                <td>Educational Value</td>
+                                <td>Teaches principles of physics, engineering, mechanics, and problem-solving</td>
+                            </tr>
+                        </table>
+                        
+                        <p>Create, experiment, and explore the world of technology with the Wooden STEM Kit 10-in-1!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ABC-Science LLC</h3>
+                    <p>Providing approved educational materials for scholarship programs across the United States.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@abc-science.com</p>
+                    <p>Phone: (800) 123-4567</p>
+                    <p>Address: 123 Education Blvd, Science City, SC 12345</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#products">Products</a>
+                    <a href="index.html#about">About Us</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 ABC-Science. All rights reserved. | Terms of Service | Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Product image gallery functionality
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.getElementById('main-product-image');
+        
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                // Update main image
+                mainImage.src = this.getAttribute('data-image');
+                mainImage.alt = this.querySelector('img').alt;
+                
+                // Update active thumbnail
+                thumbnails.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Simple image preloading for better performance
+        window.addEventListener('load', function() {
+            const images = [
+                'images/product/stem_1.jpg',
+                'images/product/stem_2.jpg',
+                'images/product/stem_3.jpg',
+                'images/product/stem_4.jpg',
+                'images/product/stem_5.jpg',
+                'images/product/stem_6.jpg'
+            ];
+            
+            images.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        });
+    </script>
+</body>
+</html>
