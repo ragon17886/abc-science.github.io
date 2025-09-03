@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STEM Learning Kit - ABC-Science LLC</title>
+    <title>First Steps in Astronomy Telescope Set - ABC-Science LLC</title>
     <style>
         /* Base styles */
         * {
@@ -113,6 +113,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
+            margin-bottom: 20px;
         }
         
         .thumbnail {
@@ -132,6 +133,18 @@
             width: 100%;
             height: 80px;
             object-fit: cover;
+            display: block;
+        }
+        
+        .video-container {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .video-container video {
+            width: 100%;
             display: block;
         }
         
@@ -274,9 +287,9 @@
                 <div class="menu-toggle">☰</div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="prod_stem.html" class="active">STEM Kit</a></li>
+                    <li><a href="prod_stem.html">STEM Kit</a></li>
                     <li><a href="prod_lab.html">Chemistry Set</a></li>
-                    <li><a href="prod_telescop.html">Space Explorer</a></li>
+                    <li><a href="prod_telescop.html" class="active">Space Explorer</a></li>
                     <li><a href="prod_anatomy.html">Anatomy Model</a></li>
                 </ul>
             </nav>
@@ -289,77 +302,105 @@
             <div class="product-container">
                 <div class="product-gallery">
                     <div class="main-image">
-                        <img src="images/product/stem_1.jpg" alt="STEM Learning Kit" id="main-product-image">
+                        <img src="images/product/telescop_1.jpg" alt="First Steps in Astronomy Telescope Set" id="main-product-image">
                     </div>
                     <div class="thumbnail-container">
-                        <div class="thumbnail active" data-image="images/product/stem_1.jpg">
-                            <img src="images/product/stem_1.jpg" alt="STEM Kit Image 1">
+                        <div class="thumbnail active" data-image="images/product/telescop_1.jpg">
+                            <img src="images/product/telescop_1.jpg" alt="Telescope Image 1">
                         </div>
-                        <div class="thumbnail" data-image="images/product/stem_2.jpg">
-                            <img src="images/product/stem_2.jpg" alt="STEM Kit Image 2">
+                        <div class="thumbnail" data-image="images/product/telescop_2.jpg">
+                            <img src="images/product/telescop_2.jpg" alt="Telescope Image 2">
                         </div>
-                        <div class="thumbnail" data-image="images/product/stem_3.jpg">
-                            <img src="images/product/stem_3.jpg" alt="STEM Kit Image 3">
+                        <div class="thumbnail" data-image="images/product/telescop_3.jpg">
+                            <img src="images/product/telescop_3.jpg" alt="Telescope Image 3">
                         </div>
-                        <div class="thumbnail" data-image="images/product/stem_4.jpg">
-                            <img src="images/product/stem_4.jpg" alt="STEM Kit Image 4">
+                        <div class="thumbnail" data-image="images/product/telescop_4.jpg">
+                            <img src="images/product/telescop_4.jpg" alt="Telescope Image 4">
                         </div>
-                        <div class="thumbnail" data-image="images/product/stem_5.jpg">
-                            <img src="images/product/stem_5.jpg" alt="STEM Kit Image 5">
+                        <div class="thumbnail" data-image="images/product/telescop_5.jpg">
+                            <img src="images/product/telescop_5.jpg" alt="Telescope Image 5">
                         </div>
-                        <div class="thumbnail" data-image="images/product/stem_6.jpg">
-                            <img src="images/product/stem_6.jpg" alt="STEM Kit Image 6">
+                        <div class="thumbnail" data-image="images/product/telescop_6.jpg">
+                            <img src="images/product/telescop_6.jpg" alt="Telescope Image 6">
                         </div>
+                    </div>
+                    
+                    <div class="video-container">
+                        <video controls poster="images/product/telescop_v1_poster.jpg">
+                            <source src="images/product/telescop_v1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
                 
                 <div class="product-details">
-                    <h1 class="product-title">Wooden STEM Kit 10-in-1</h1>
+                    <h1 class="product-title">First Steps in Astronomy Telescope Set</h1>
                     
                     <div class="product-description">
-                        <p>This multifunctional wooden STEM kit allows you to build 10 fascinating models that introduce children to the fundamentals of physics, mechanics, engineering, and technology. All parts of the set are made of eco-friendly wood, making the assembly process not only educational but also safe.</p>
+                        <p>A practical STEM kit for introducing children and beginners to astronomy. This lightweight telescope on an azimuth mount sets up in minutes and allows for educational observations of the Moon, bright planets, and terrestrial objects. Perfect for clubs, home studies, and school projects.</p>
                         
-                        <h3>What can be built from the kit:</h3>
+                        <h3>Educational Goals:</h3>
                         <ul class="features-list">
-                            <li><strong>Hydraulic Excavator</strong> - A model with two syringes demonstrating the principles of hydraulics and construction equipment operation.</li>
-                            <li><strong>Elevator Lift</strong> - A mechanical elevator model with electric drive or manual control.</li>
-                            <li><strong>Lifting Table (Hydraulic Lift)</strong> - Demonstrates the operation of lifting platforms using hydraulics.</li>
-                            <li><strong>Suspension Bridge</strong> - An engineering structure model illustrating the laws of bridge strength and stability.</li>
-                            <li><strong>Catapult</strong> - A classic mechanical catapult for launching small objects.</li>
-                            <li><strong>Ballista</strong> - An ancient projectile throwing machine.</li>
-                            <li><strong>Rubber Band Car</strong> - A model car powered by a twisted rubber band.</li>
-                            <li><strong>Electric Car</strong> - A car powered by an electric motor, controlled via remote.</li>
-                            <li><strong>Drawing Pendulum (Spirograph)</strong> - A device that creates patterns through rotation and pendulum movements.</li>
-                            <li><strong>Snake Lift (Serpentine Elevator)</strong> - A mechanical model demonstrating movement along a complex trajectory.</li>
+                            <li>Understand telescope and eyepiece principles, field of view, and magnification</li>
+                            <li>Master targeting with the finder scope and celestial navigation (Polar Star, major constellations)</li>
+                            <li>Observe Moon phases, Jupiter's moons, and planetary visibility changes</li>
+                            <li>Maintain an observation journal, compare conditions (weather, light pollution, object altitude)</li>
+                            <li>Develop precision, patience, and research skills</li>
                         </ul>
                         
-                        <h3>Benefits of the kit:</h3>
+                        <h3>What's Included:</h3>
                         <ul class="features-list">
-                            <li>Develops logical thinking, motor skills, engineering, and spatial imagination.</li>
-                            <li>Allows studying the basics of physics, mechanics, hydraulics, electrical engineering, and architecture.</li>
-                            <li>Excellent for joint activities of parents and children, as well as for school projects.</li>
+                            <li>Telescope with 90° diagonal for comfortable viewing</li>
+                            <li>Optical finder scope for quick targeting</li>
+                            <li>Adjustable aluminum tripod and simple azimuth mount</li>
+                            <li>Eyepiece(s) for different magnification levels</li>
+                            <li>Basic assembly and operation instructions</li>
+                        </ul>
+                        
+                        <h3>Example Activities and Mini-Projects:</h3>
+                        <ul class="features-list">
+                            <li>First Light: assembly, finder scope alignment, Moon search</li>
+                            <li>Moon Map: sketching 5-7 notable craters and seas, comparison at different magnifications</li>
+                            <li>Jupiter's Moons: observing their positions on different evenings, creating a simple table</li>
+                            <li>Magnification Rainbow: how brightness and contrast change with different eyepieces</li>
+                            <li>Orientation: finding the North Star and determining cardinal directions</li>
+                            <li>Daily Motion: tracking object movement in the field of view and discussing Earth's rotation</li>
+                        </ul>
+                        
+                        <h3>Set Features:</h3>
+                        <ul class="features-list">
+                            <li>Intuitive azimuth mount - smooth vertical and horizontal targeting</li>
+                            <li>Compact optics and lightweight tripod - easy to take outdoors or to school</li>
+                            <li>Suitable for astronomy and terrestrial observations during the day</li>
+                        </ul>
+                        
+                        <h3>Recommendations for Teachers/Parents:</h3>
+                        <ul class="features-list">
+                            <li>Start with low magnification, then progress to higher</li>
+                            <li>Allow eyes 10-15 minutes to adapt to darkness</li>
+                            <li>Maintain a shared observation journal for the class/family</li>
                         </ul>
                         
                         <table class="specs-table">
                             <tr>
                                 <td>Age</td>
-                                <td>6+ years</td>
+                                <td>8+ years (with adult supervision)</td>
                             </tr>
                             <tr>
                                 <td>Contents</td>
-                                <td>All necessary wooden parts for 10 models, hydraulic elements (syringes, tubes), electric motor, wires, detailed assembly instructions.</td>
+                                <td>Telescope, tripod, eyepieces, finder scope, diagonal, instruction manual</td>
                             </tr>
                             <tr>
-                                <td>Material</td>
-                                <td>Eco-friendly wood, plastic elements, metal components</td>
+                                <td>Safety</td>
+                                <td>Never point telescope at Sun without professional solar filter, use tripod on flat surface, keep small parts away from young children</td>
                             </tr>
                             <tr>
                                 <td>Educational Value</td>
-                                <td>Teaches principles of physics, engineering, mechanics, and problem-solving</td>
+                                <td>Teaches astronomy principles, observational skills, scientific method, and patience</td>
                             </tr>
                         </table>
                         
-                        <p>Create, experiment, and explore the world of technology with the Wooden STEM Kit 10-in-1!</p>
+                        <p>Perfect for schoolchildren, parents, educators, STEM clubs; for home experiments, extracurricular activities, and as a gift for young researchers.</p>
                     </div>
                 </div>
             </div>
@@ -421,12 +462,12 @@
         // Simple image preloading for better performance
         window.addEventListener('load', function() {
             const images = [
-                'images/product/stem_1.jpg',
-                'images/product/stem_2.jpg',
-                'images/product/stem_3.jpg',
-                'images/product/stem_4.jpg',
-                'images/product/stem_5.jpg',
-                'images/product/stem_6.jpg'
+                'images/product/telescop_1.jpg',
+                'images/product/telescop_2.jpg',
+                'images/product/telescop_3.jpg',
+                'images/product/telescop_4.jpg',
+                'images/product/telescop_5.jpg',
+                'images/product/telescop_6.jpg'
             ];
             
             images.forEach(src => {
