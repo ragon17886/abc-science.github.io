@@ -138,22 +138,25 @@
         
         .product-card {
             background: #fff;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            display:block;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            display: block;
+            position: relative;
         }
         
         .product-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
         }
         
         .product-img {
             height: 200px;
-            width: 200px;
+            width: 100%;
             margin: 0 auto;
             overflow: hidden;
+            position: relative;
         }
         
         .product-img img {
@@ -164,7 +167,7 @@
         }
         
         .product-card:hover .product-img img {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
         
         .product-info {
@@ -172,8 +175,62 @@
         }
         
         .product-info h3 {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: #2c3e50;
+            font-size: 18px;
+            line-height: 1.3;
+        }
+        
+        .product-info p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .product-pricing-card {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .product-price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a6dfc;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .shipping-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f8f9fa;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #1a6dfc;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .shipping-badge::before {
+            content: "✓";
+            font-weight: bold;
+            color: #ff9900;
+        }
+        
+        .prime-label {
+            color: #ff9900;
+            font-weight: 600;
+        }
+        
+        .free-delivery {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
         }
         
         /* Content Sections */
@@ -361,7 +418,7 @@
     <!-- Products Section -->
     <section class="products">
         <div class="container">
-            <h2 class="section-title">Educational Kits</h2>
+            <h2 class="section-title">Educational Kits</h2>           
             <div class="product-grid">
                 <a class="product-card" href="prod_stem.html">
                     <div class="product-img">
@@ -370,6 +427,13 @@
                     <div class="product-info">
                         <h3>STEM Learning Kit</h3>
                         <p>Comprehensive kit for exploring science, technology, engineering, and math concepts.</p>
+                        <div class="product-pricing-card">
+                            <div class="product-price">$49.99</div>
+                            <div class="shipping-badge">
+                                <span class="prime-label">Prime</span> FREE delivery
+                            </div>
+                            <div class="free-delivery">2-5 business days</div>
+                        </div>
                     </div>
                 </a>
                 
@@ -380,6 +444,13 @@
                     <div class="product-info">
                         <h3>Chemistry Set</h3>
                         <p>Complete laboratory set for safe and exciting chemistry experiments at home.</p>
+                        <div class="product-pricing-card">
+                            <div class="product-price">$49.99</div>
+                            <div class="shipping-badge">
+                                <span class="prime-label">Prime</span> FREE delivery
+                            </div>
+                            <div class="free-delivery">2-5 business days</div>
+                        </div>
                     </div>
                 </a>
                 
@@ -390,6 +461,13 @@
                     <div class="product-info">
                         <h3>Space Explorer Kit</h3>
                         <p>Astronomy kit with telescope and materials to explore the wonders of space.</p>
+                        <div class="product-pricing-card">
+                            <div class="product-price">$99.99</div>
+                            <div class="shipping-badge">
+                                <span class="prime-label">Prime</span> FREE delivery
+                            </div>
+                            <div class="free-delivery">2-5 business days</div>
+                        </div>
                     </div>
                 </a>
                 
@@ -400,6 +478,13 @@
                     <div class="product-info">
                         <h3>Human Anatomy Model</h3>
                         <p>Detailed anatomical model for studying human body systems and functions.</p>
+                        <div class="product-pricing-card">
+                            <div class="product-price">$29.99</div>
+                            <div class="shipping-badge">
+                                <span class="prime-label">Prime</span> FREE delivery
+                            </div>
+                            <div class="free-delivery">2-5 business days</div>
+                        </div>
                     </div>
                 </a>
             </div>
